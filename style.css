@@ -11,6 +11,22 @@ header {
   color: white;
 }
 
+.project-list {
+  counter-reset: project-counter;
+}
+
+.project-list li::before {
+  counter-increment: project-counter;
+  content: counter(project-counter) " - ";
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #333;
+  display: inline-block;
+  width: 2em; /* espacio reservado para alineación */
+  text-align: right;
+}
+
+
 ul.project-list {
   list-style: none;
   padding: 0;
@@ -25,7 +41,15 @@ ul.project-list {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
+
+.project-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
 
 .project-list a {
   text-decoration: none;
@@ -33,9 +57,79 @@ ul.project-list {
   font-size: 1.2rem;
 }
 
+.project-list a:hover {
+  color: #0056b3;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
   background: #222;
   color: white;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark-mode .project-list li {
+  background: #2c2c2c;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+/* Color de letra de los proyectos*/
+body.dark-mode .project-list a {
+  color: #66aaff;
+}
+
+body.dark-mode .project-list a:hover {
+  color: #99ccff;
+}
+
+body.dark-mode button {
+  background: #444;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+button#toggle-dark-mode {
+  margin: 1rem auto;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  background: #eee;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode button#toggle-dark-mode {
+  background: #444;
+  color: #eee;
+}
+
+/* Para los numeros en modo*/
+body.dark-mode .project-list li::before {
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .project-list li {
+    margin: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .project-list a {
+    font-size: 1rem;
+  }
 }
