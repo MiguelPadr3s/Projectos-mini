@@ -23,7 +23,7 @@ async function getRepos(username) {
 
         addReposToCard(data)
     } catch(err) {
-            createErrorCard('Problem fetching repos')
+        createErrorCard('Problem fetching repos')
     }
 }
 
@@ -52,6 +52,16 @@ function createUserCard(user) {
     
 }
 
+function createErrorCard(msg) {
+    const cardHTML = `
+        <div class="card">
+            <h1>${msg}</h1>
+        </div>
+    `
+
+    main.innerHTML = cardHTML
+}
+
 function addReposToCard(repos) {
     const reposEl = document.getElementById('repos')
 
@@ -66,15 +76,6 @@ function addReposToCard(repos) {
 
             reposEl.appendChild(repoEl)
         })
-}
-
-function createErrorCard(msg) {
-    const cardHTML = `
-    <div class="card">
-        <h1>${msg}</h1>
-    </div>
-    `
-    main.innerHTML = cardHTML
 }
 
 form.addEventListener('submit', (e) => {
