@@ -14,7 +14,7 @@ function addTransaction(e) {
     e.preventDefault();
 
     // get form values
-    const description = descriptionEl.value().trim();
+    const description = descriptionEl.value.trim();
     const amount = amountEl.value;
 
     console.log(typeof amount);
