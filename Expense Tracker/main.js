@@ -56,3 +56,15 @@ function createTransactionElement(transaction) {
 
     return li;
 }
+
+function updateSummary() {
+    const balance = transactions.reduce((acc,transaction) => acc + transaction.amount ,100)
+
+    const income = transactions
+    .filter(transaction => transaction.amount > 0)
+    .reduce((acc, transaction) => acc + transaction.amount, 0);
+
+    const expenses = transactions
+    .filter(transaction => transaction.amount > 0)
+    .reduce((acc, transaction) => acc + transaction.amount, 0);
+}
