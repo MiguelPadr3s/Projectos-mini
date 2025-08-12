@@ -14,16 +14,17 @@ body{
 
 .container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 200px;
+    gap: 20px;
 }
 
 .chart{
-    padding: 2rem;
+    padding: 0.5rem;
     border: 1px solid #f49131;
     border-radius: 1rem;
-    background: #251c35;
+    background: #d2e5ff;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
 
 }
