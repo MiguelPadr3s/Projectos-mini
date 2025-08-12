@@ -7,6 +7,7 @@ const recipeCloseBtn = document.querySelector(".recipe-close-btn");
 // Function to get recipes from the API
 const fetchRecipes = async (query) => {
   recipeContainer.innerHTML = "<h2>Feching recipes...<h2>";
+  try {
   const data = await fetch(
     `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
   );
@@ -36,6 +37,10 @@ const fetchRecipes = async (query) => {
 
     recipeContainer.appendChild(recipeDiv);
   });
+
+} catch (error) {
+    recipeContainer.innerHTML = "<h2>Error in Fetching Recipes...<h2>";
+}
 };
 
 // function to fetch ingredients and measurements
@@ -76,6 +81,10 @@ recipeCloseBtn.addEventListener("click", () => {
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const searchInput = searchBox.value.trim();
+  if (!searchInput) {
+    recipeContainer.innerHTML = `<h2>Type the meal in the search box</h2>`;
+    return;
+  }
   fetchRecipes(searchInput);
   // console.log("Button Clicked");
 });

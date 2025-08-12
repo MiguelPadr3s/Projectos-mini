@@ -201,6 +201,18 @@ form button[type="submit"]:hover,
     --webkit-border-radius: 16px;
 }
 
+body::-webkit-scrollbar {
+    width: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a1a1a1;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ebebeb;
+}
+
 .recipeInstructions {
     color: #fff;
     margin: 20px;
