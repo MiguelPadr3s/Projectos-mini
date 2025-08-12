@@ -78,6 +78,11 @@ form button[type="submit"]:hover,
     box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);
     cursor: pointer;
     max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe:hover {
+    transform: scale(1.1);
 }
 
 .recipe img {
@@ -133,15 +138,56 @@ form button[type="submit"]:hover,
     padding: 30px;
 }
 
+.ingredientList li {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.recipeInstructions p{
+    line-height: 30px;
+    white-space: pre-line;
+}
+
 .recipeName {
     text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
+    margin-bottom: 10px;
     color: #7cd5e2;
 }
 
 .recipeing {
     color: #7cd5e2;
+}
+
+.ingredientList {
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+
+.recipeName, .ingredientList, .recipeInstructions {
+    margin-bottom: 20px;
+}
+
+.recipe-close-btn {
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #b5b5ba;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.recipe-close-btn:hover {
+    background-color: #b5b5bad5;
 }
 
 /* adding a scrollbar to recipe details popup */
@@ -159,15 +205,6 @@ form button[type="submit"]:hover,
     color: #fff;
     margin: 20px;
     line-height: 1.6;
-}
-
-.ingredientList {
-    margin-bottom: 10px;
-    margin-left: -20px;
-}
-
-li {
-    color: black;
 }
 
 h2, h3, ul{
