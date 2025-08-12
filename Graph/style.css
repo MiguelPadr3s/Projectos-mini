@@ -20,6 +20,13 @@ body{
     gap: 20px;
 }
 
+h1, p {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 3.5rem;
+}
+
 .chart{
     padding: 0.5rem;
     border: 1px solid #f49131;
