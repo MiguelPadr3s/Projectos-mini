@@ -40,3 +40,53 @@ h1, p {
     text-align: center;
     font-weight: bold;
 }
+
+.pareto-chart {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  height: 200px;
+  width: fit-content;
+  min-width: 270px;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+.pareto-bar {
+  width: 40px;
+  margin: 0 5px;
+  background: #6c63ff;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.pareto-bar span {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #333;
+}
+.pareto-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 2;
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+.pareto-percent-label {
+  paint-order: stroke fill;
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-opacity: 0.7;
+  font-weight: bold;
+  background: rgba(255,255,255,0.7);
+  border-radius: 4px;
+}
