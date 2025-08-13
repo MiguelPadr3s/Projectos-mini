@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
           borderColor: "rgba(33, 150, 243, 1)",
           borderWidth: 1,
         },
-        
       ],
     },
     options: {},

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           type: "line",
           label: "Line Dataset",
-          data: [50, 50, 50, 50],
+          data: [30, 10, 60, 20],
           fill: false,
           borderColor: "rgb(54, 162, 235)",
         },
