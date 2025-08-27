@@ -96,6 +96,8 @@ body {
 
 #close-icon{
   cursor: pointer;
+  margin-left: 15px;
+  margin-top: 12px;
 }
 
 .main-title {
