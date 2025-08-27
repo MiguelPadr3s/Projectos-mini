@@ -24,8 +24,8 @@ function Model2() {
     <>
       <primitive
         object={result.scene}
-        position={[5, -0.99, -5]}
-        scale={[0.02, 0.02, 0.02]}
+        position={[0, 1.5, 0]}
+        scale={[1.02, 1.02, 1.02]}
       />
  
       {/* Anotacion 1 */}
@@ -292,7 +292,7 @@ function App() {
       <Canvas camera={{ position: [30, 14, -15], fov: 15 }}>
          
         <ambientLight intensity={0.9} />
-        <directionalLight position={[5, 10, 5]} intensity={0}/>
+        <directionalLight position={[5, 10, 5]} intensity={5}/>
         <OrbitControls />
 
         {/* codigo del suelo */}
