@@ -17,7 +17,7 @@ import { Color} from 'three';
   scale={[1, 1, 1]}/>;
 }*/
 function Model2() {
-  const result = useLoader(GLTFLoader, '/Alien/scene.gltf');
+  const result = useLoader(GLTFLoader, 'public/Alien/scene.gltf');
   result.scene.rotation.y = Math.PI;
 
   return (
@@ -268,8 +268,8 @@ function UpdateSceneBackground() {
   });
 
   const textures = useTexture({
-    Office: '/office.jpg',
-    Nexis: '/Nexis.png',
+    Office: 'public/office.jpg',
+    Nexis: 'public/Nexis.png',
   });
 
   useEffect(() => {
